@@ -153,6 +153,11 @@ section {
   width: 400px;
 }
 
+.section__pic-container img {
+  max-width: 100%; /* Responsive image */
+  height: auto;    /* Maintain aspect ratio */
+}
+
 .section__text {
   text-align: center;
 }
@@ -259,7 +264,7 @@ article .icon {
 .project-img {
   border-radius: 2rem;
   width: 90%;
-  height: 90%;
+  height: auto; /* Maintain original aspect ratio */
 }
 
 .project-title {
