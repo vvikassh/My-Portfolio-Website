@@ -311,38 +311,3 @@ footer {
 footer p {
   text-align: center;
 }
-
-/* TYPING ANIMATION */
-.typing-animation {
-  display: inline-block;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 3px solid #000;
-  width: 0;
-  animation: typing 2s steps(12, end), blink-caret 0.75s step-end infinite;
-  visibility: hidden;
-}
-
-#role1 {
-  visibility: visible;
-  animation: typing-1 3s steps(12, end), blink-caret 0.75s step-end infinite;
-}
-
-#role2 {
-  animation: typing-2 3s steps(19, end) 3s forwards, blink-caret 0.75s step-end infinite 6s;
-}
-
-@keyframes typing-1 {
-  from { width: 0; }
-  to { width: 12ch; }
-}
-
-@keyframes typing-2 {
-  from { width: 0; }
-  to { width: 19ch; }
-}
-
-@keyframes blink-caret {
-  from, to { border-color: transparent; }
-  50% { border-color: black; }
-}
