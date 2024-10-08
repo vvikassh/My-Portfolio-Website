@@ -430,3 +430,42 @@ footer {
 footer p {
   text-align: center;
 }
+/* Typing animation base */
+.typing-animation {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid black; /* Cursor effect */
+  width: 0; /* Initially hidden */
+  animation: typing 2s steps(12, end), blink-caret 0.75s step-end infinite;
+  visibility: hidden; /* Hide initially */
+}
+
+/* Typing for "Data Scientist" */
+#role1 {
+  visibility: visible;
+  animation: typing-1 3s steps(12, end), blink-caret 0.75s step-end infinite;
+}
+
+/* Typing for "Full-Stack Developer" */
+#role2 {
+  animation: typing-2 3s steps(19, end) 3s forwards, blink-caret 0.75s step-end infinite 6s;
+}
+
+/* Typing effect for Data Scientist */
+@keyframes typing-1 {
+  from { width: 0; }
+  to { width: 12ch; } /* Adjust for the length of "Data Scientist" */
+}
+
+/* Typing effect for Full-Stack Developer */
+@keyframes typing-2 {
+  from { width: 0; }
+  to { width: 19ch; } /* Adjust for the length of ", Full-Stack Developer" */
+}
+
+/* Blinking cursor */
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: black; }
+}
